@@ -101,4 +101,4 @@ shape = SubResource("CapsuleShape2D_vry0k")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_8m3te")
 animation = &"Idle"
-frame_progress = 0.428754
+frame_progress = 0.189281
