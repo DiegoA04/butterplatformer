@@ -1,4 +1,6 @@
 extends CharacterBody2D
+class_name Player
+
 
 
 const SPEED = 300.0
@@ -6,18 +8,25 @@ const JUMP_VELOCITY = -400.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-@export var coyote = 5
-@export var jumpMaxLength = 3
+@export var voidout = 700
+@export var coyote = 0.02
 var isJumpheld = false
 var hasJumped = false
 var coyoteTimer = 0
+var respawnPoint = Vector2()
 
 @onready var animate = %maskungabunga
 
 func _ready():
 	animate.play("Idle")
-func _physics_process(delta):
+	respawnPoint = global_position
 	
+
+
+func _physics_process(delta):
+	if global_position.y >= voidout:
+		die()
+
 	var direction = Input.get_axis("left", "right")
 	if direction:
 		animate.play("Run")
@@ -57,3 +66,7 @@ func _physics_process(delta):
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	
 	move_and_slide()
+
+func die():
+	global_position = respawnPoint
+	velocity = Vector2.ZERO
