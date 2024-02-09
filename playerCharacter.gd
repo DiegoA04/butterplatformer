@@ -60,7 +60,7 @@ func _physics_process(delta):
 		isJumpheld = true
 
 	if Input.is_action_just_released("jump") and isJumpheld:
-		velocity.y = maxf(velocity.y, -25)
+		velocity.y = maxf(velocity.y, -100)
 		isJumpheld = false
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.

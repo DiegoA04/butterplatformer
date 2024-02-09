@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dteholjkh16bg" path="res://pixeladventureassets/Main Characters/Mask Dude/Fall (32x32).png" id="5_rw3k1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hhyyi"]
-size = Vector2(24, 29)
+size = Vector2(17, 29)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vgxj4"]
 atlas = ExtResource("2_6eoyb")
@@ -207,7 +207,7 @@ animations = [{
 script = ExtResource("1_h8f3r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, -1.5)
+position = Vector2(1.5, -0.5)
 shape = SubResource("RectangleShape2D_hhyyi")
 
 [node name="maskungabunga" type="AnimatedSprite2D" parent="."]

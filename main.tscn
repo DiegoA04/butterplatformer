@@ -617,4 +617,4 @@ offset_bottom = 23.0
 position = Vector2(866, 574)
 
 [node name="PlayerCharacter" parent="." instance=ExtResource("2_rd4tg")]
-position = Vector2(141, 593)
+position = Vector2(109, 570)
