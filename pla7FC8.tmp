@@ -248,6 +248,7 @@ animations = [{
 script = ExtResource("1_h8f3r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, -0.5)
 shape = SubResource("RectangleShape2D_hhyyi")
 
 [node name="maskungabunga" type="AnimatedSprite2D" parent="."]
